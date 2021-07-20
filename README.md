@@ -13,7 +13,10 @@ Core Developers| Blockchain Infrastructure
 ___
 
 ## Overview
-The main smart contracts used for NFT distribution are described below.
+Major smart contracts used for NFT distribution are described below.
+
+<img src="https://github.com/Japan-Contents-Blockchain-Initiative/content-nft-ethereum/blob/main/outline.png" height="400"> 
+
 | contract name | discription |
 ----|---- 
 | DigitalContentSpec | Specification of NFT |
