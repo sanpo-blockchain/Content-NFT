@@ -78,7 +78,6 @@ The main smart contracts used for NFT distribution are described below.
 | transferFrom | Change the owner by allowed account |
 | approve | Allow a account to change owner |
 
-___
 
 ### ERC20Token
 Same smart contract as popular ERC20 Token.
