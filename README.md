@@ -73,13 +73,17 @@ The main smart contracts used for NFT distribution are described below.
 | getDigitalContentObject | Get infomation of a NFT |
 | specIdOf | Get the speficication ID of a NFT |
 | objectMediaIdOf | Get the media ID of a NFT  |
-| totalSupplyOf | Total supply number of the specification that a NFT belongs to:|
+| totalSupplyOf | Total supply number of the specification that a NFT belongs to |
 | transfer | Change the owner of a NFT |
 | transferFrom | Change the owner by allowed account |
 | approve | Allow a account to change owner |
 
 ___
 
+### ERC20Token
+Same smart contract as popular ERC20 Token.
+
+___
 
 ## License
 JCBI Content NFT Ethereum is released under the MIT License.
