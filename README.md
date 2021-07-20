@@ -15,7 +15,7 @@ ___
 ## Overview
 Major smart contracts used for NFT distribution are described below.
 
-<img src="https://github.com/Japan-Contents-Blockchain-Initiative/content-nft-ethereum/blob/main/outline.png" height="400"> 
+<img src="https://github.com/Japan-Contents-Blockchain-Initiative/content-nft-ethereum/blob/main/outline.png" height="300"> 
 
 | contract name | discription |
 ----|---- 
