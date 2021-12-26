@@ -88,4 +88,4 @@ Same smart contract as popular ERC20 Token.
 ___
 
 ## License
-JCBI Content NFT Ethereum is released under the MIT License.
+Content NFT Ethereum is released under the MIT License.
