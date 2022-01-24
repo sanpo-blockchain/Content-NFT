@@ -63,6 +63,7 @@ contract DigitalContentSpec is Control, ManagerRole {
 
     /*** EXTERNAL FUNCTIONS ***/
     /// @dev Define a DigitalContentSpec.
+    /// @dev Please note that Object cannot be mint only when specId is 0.
     /// @param _name contentName
     /// @param _symbol contentSymbol
     /// @param _mediaId mediaId
