@@ -80,7 +80,7 @@ Major smart contracts used for NFT distribution are described below.
 | transfer | Change the owner of a NFT |
 | transferFrom | Change the owner by allowed account |
 | approve | Allow a account to change owner |
-| ownedObjectsOf | Change the owner by allowed account |
+| ownedObjectsOf | Gets list of the owned object ID |
 | getNumberOfObjects | Get the number of objects |
 
 
