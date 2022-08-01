@@ -1,4 +1,4 @@
-# A reference implementation for secure content NFT development. 
+# A reference implementation for secure content NFT development.
 
 Core Developers| Blockchain Infrastructure
 :-------------------------:|:-------------------------:
@@ -8,17 +8,17 @@ Core Developers| Blockchain Infrastructure
   - Based on the ERC721, with drastic enhancements
   - In addition to the media identifier saved in ERC721, contract information and product information are saved in text format.
   - Implemented the concept of specification. Specifications mean copyright information.
-  - Mint multiple NFTs with serial numbers based on specifications 
+  - Mint multiple NFTs with serial numbers based on specifications
 
 ___
 
 ## Overview
 Major smart contracts used for NFT distribution are described below.
 
-<img src="https://github.com/Japan-Contents-Blockchain-Initiative/content-nft-ethereum/blob/main/outline.png" height="300"> 
+<img src="https://github.com/Japan-Contents-Blockchain-Initiative/content-nft-ethereum/blob/main/outline.png" height="300">
 
 | contract name | discription |
-----|---- 
+----|----
 | DigitalContentSpec | Specification of NFT |
 | DigitalContentObject | NFT based on Specifications  |
 | ERC20Token | Utility Token to trade NFT |
@@ -44,7 +44,7 @@ Major smart contracts used for NFT distribution are described below.
 
 #### functions
 | major function | discription |
-----|---- 
+----|----
 | design | Create a new specification |
 | updateSecondaryMarketPermission | ALLOW or NOT ALLOW to sell NFT in seconary markets |
 | copyrightTransfer | Change the specification owner |
@@ -69,7 +69,7 @@ Major smart contracts used for NFT distribution are described below.
 
 #### functions
 | major function | discription |
-----|---- 
+----|----
 | mint | Create a new NFT |
 | setMediaId | Update a Media information like URI |
 | setInfo | Update information of a NFT |
@@ -80,6 +80,8 @@ Major smart contracts used for NFT distribution are described below.
 | transfer | Change the owner of a NFT |
 | transferFrom | Change the owner by allowed account |
 | approve | Allow a account to change owner |
+| ownedObjectsOf | Change the owner by allowed account |
+| getNumberOfObjects | Get the number of objects |
 
 
 ### ERC20Token
