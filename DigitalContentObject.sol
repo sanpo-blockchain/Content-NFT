@@ -37,9 +37,6 @@ contract DigitalContentObject is DigitalContentSpec {
     // Mapping from object id to position in the minted objects array
     mapping(uint256 => uint256) private mintedObjectsIndex;
 
-    // Array with all object ids, used for enumeration
-    uint256[] private _allObjects;
-
     /*** Event ***/
     event MintLog(
         address owner,
@@ -91,7 +88,7 @@ contract DigitalContentObject is DigitalContentSpec {
 
         // check total supply count
         require(
-            totalSupplyLimitOf(_specId) >= mintedObjects[_specId].length
+            totalSupplyLimitOf(_specId) > mintedObjects[_specId].length
             || totalSupplyLimitOf(_specId) == 0
         );
 
@@ -255,6 +252,25 @@ contract DigitalContentObject is DigitalContentSpec {
     }
 
     /**
+     * @dev Gets list of the owned object ID.
+     * @param _owner address to query the owned objects of
+     * @return uint256[]
+     */
+    function ownedObjectsOf(address _owner) public view returns (uint256[] memory) {
+        require(_owner != address(0), "owner query for the zero address");
+
+        return _ownedObjects[_owner];
+    }
+
+    /**
+     * @dev Get the number of objects.
+     * @return uint256 The number of objects
+     */
+    function getNumberOfObjects() public view returns (uint256) {
+      return digitalContentObjects.length;
+    }
+
+    /**
      * @dev Transfers the ownership of a given object ID to another address.
      * @param _to address to receive the ownership of the given object ID
      * @param _objectId uint256 ID of the object to be transferred
@@ -351,6 +367,18 @@ contract DigitalContentObject is DigitalContentSpec {
 
         _objectOwner[_objectId] = _to;
 
+        uint256[] memory ownedList = _ownedObjects[_sender];
+        uint256[] memory newList = new uint256[](ownedList.length - 1);
+        uint256 newIndex = 0;
+        for (uint i = 0; i < ownedList.length; i++) {
+          if (ownedList[i] != _objectId) {
+            newList[newIndex] = ownedList[i];
+            newIndex += 1;
+          }
+        }
+        _ownedObjects[_sender] = newList;
+        _ownedObjects[_to].push(_objectId);
+
         emit TransferLog(_sender, _to, _objectId);
     }
 
@@ -371,6 +399,18 @@ contract DigitalContentObject is DigitalContentSpec {
         _ownedObjectsCount[_to] += 1;
 
         _objectOwner[_objectId] = _to;
+
+        uint256[] memory ownedList = _ownedObjects[_from];
+        uint256[] memory newList = new uint256[](ownedList.length - 1);
+        uint256 newIndex = 0;
+        for (uint i = 0; i < ownedList.length; i++) {
+          if (ownedList[i] != _objectId) {
+            newList[newIndex] = ownedList[i];
+            newIndex += 1;
+          }
+        }
+        _ownedObjects[_from] = newList;
+        _ownedObjects[_to].push(_objectId);
 
         emit TransferLog(_from, _to, _objectId);
     }
@@ -407,6 +447,4 @@ contract DigitalContentObject is DigitalContentSpec {
             _objectApprovals[_objectId] = address(0);
         }
     }
-
-
 }
