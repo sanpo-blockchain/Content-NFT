@@ -2,7 +2,7 @@
 
 Core Developers| Blockchain Infrastructure
 :-------------------------:|:-------------------------:
-<img src="https://github.com/sanpo-blockchain/logo/blob/main/sanpo-square-logo.png" height="30"> Technical Subcommittee | <img src="https://github.com/sanpo-blockchain/logo/blob/main/sanpo-logo.png" height="30">
+<img src="https://github.com/sanpo-blockchain/logo/blob/main/sanpo-square-logo.png" height="30"> Technical Committee | <img src="https://github.com/sanpo-blockchain/logo/blob/main/sanpo-logo.png" height="30">
 
 - Smart contract for content distribution that supports copyright protection
   - Based on the ERC721, with drastic enhancements
