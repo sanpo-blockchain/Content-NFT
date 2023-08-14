@@ -80,9 +80,6 @@ Major smart contracts used for NFT distribution are described below.
 | getNumberOfObjects | Get the number of objects |
 
 
-### ERC20Token
-Same smart contract as popular ERC20 Token.
-
 ___
 
 ## License
